@@ -25,11 +25,17 @@ public class Game : MonoBehaviour
     void Update()
     {
         float totalOthers = 0;
+        Global.powerOuts = 0;
         foreach (var area in areas)
         {
-            totalOthers += area.others;
+            if (area.powerout > 0) {
+                Global.powerOuts++;
+            } else {
+                // Count only active regions
+                totalOthers += area.others;
+            }
         }
-        var result = totalOthers / areas.Length;
+        var result = totalOthers / (areas.Length - Global.powerOuts);
         
         othersStatus.fillAmount = result;
 

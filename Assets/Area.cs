@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Area : MonoBehaviour
 {
+    [SerializeField]
     GameObject smsPrefab1;
+    [SerializeField]
     GameObject smsPrefab2;
 
     private Canvas canvas;
@@ -20,7 +22,7 @@ public class Area : MonoBehaviour
     public int population;
 
     // poweroutpoweroutpoweroutpowerout
-    private float powerout;
+    public float powerout;
 
     private float smsFatigue = 0f;
 
@@ -34,22 +36,23 @@ public class Area : MonoBehaviour
         // canvas.transform.SetParent(null);
 
         others = UnityEngine.Random.Range(0f, 1f);
+        // others = UnityEngine.Random.Range(0, 2);
         ResetTrend();
     }
 
     public void ResetTrend()
     {
-        var trendMax = 0.003f;
-        var a = -trendMax;
-        var b = trendMax;
-        if (UnityEngine.Random.Range(0, 3) == 0) {
-            a *= 0;
-            b *= 2;
-        } else if (UnityEngine.Random.Range(0, 3) == 0) {
-            a *= 2;
-            b *= 0;
-        }
-        trend = UnityEngine.Random.Range(a, b);
+        // var trendMax = 0.003f;
+        // var a = -trendMax;
+        // var b = trendMax;
+        // if (UnityEngine.Random.Range(0, 3) == 0) {
+        //     a = 0;
+        //     b = trendMax * 2;
+        // } else if (UnityEngine.Random.Range(0, 4) == 0) {
+        //     a = -trendMax * 3;
+        //     b = 0;
+        // }
+        // trend = UnityEngine.Random.Range(a, b);
     }
 
     // Update is called once per frame
@@ -65,13 +68,22 @@ public class Area : MonoBehaviour
         // show support
         factionIcon.color = new Color(0, 1 - others, others, 1);
         //show blackout
-        if (powerout >= 0) {
+        if (powerout > 0) {
             factionIcon.color = new Color(0, 0, 0, 1);
+            transform.Find("powerout").gameObject.SetActive(true);
+        } else {
+            transform.Find("powerout").gameObject.SetActive(false);
         }
     }
 
-    public void Clicked()
+    public void Clicked(bool rightClick = false)
     {
+        if (rightClick) {
+            Global.tool = "Powerout";
+        } else {
+            Global.tool = "SMS";
+        }
+        
         if (Global.tool == "SMS") {
             Debug.Log("Activating SMS on ", this);
             var thePrefab = smsPrefab1;
@@ -97,8 +109,10 @@ public class Area : MonoBehaviour
                 //or for tandom rotarion use Quaternion.LookRotation(Random.insideUnitSphere)
             }
         } else if (Global.tool == "Powerout") {
-            powerout = 10f;
-        } else if (Global.tool == "???????????????????????") {
+            // Only allow one at a time
+            if (Global.powerOuts < 1) {                
+                powerout = 10f;
+            }
         }
         
         smsFatigue = Mathf.Max(0f, smsFatigue - 0.1f);
@@ -106,7 +120,7 @@ public class Area : MonoBehaviour
 
     private float SMSPower()
     {
-        return 0.08f;
+        return 0.14f;
     }
 
 }
