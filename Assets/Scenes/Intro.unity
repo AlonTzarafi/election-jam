@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -186,22 +185,22 @@ PrefabInstance:
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80.5
+      value: 74.5
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -429
+      value: -430
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 51
+      value: -259
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -211,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -251,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 13.05
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -261,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 125
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -294,27 +293,23 @@ PrefabInstance:
       value: 'Welcome to 30000. The world now is populated by robots. Your mission
         is to drag the elections as much as possible by keeping the balance equal.
 
-        If
-        one side has more than 60% votes, they win the election!
+        If one side has more than 60% votes, they win the election!
 
 
-        How do
-        you influence an area?
+        How do you influence an area?
 
-        1. By sending SMSs (left click), but be
-        careful, if you send too many you''ll get blocked.
+        1. By sending SMSs (left click), but be careful, if you send too many you''ll
+        get blocked.
 
-        2. By giving
-        an area a power cut (right click) so the robots can''t vote.
+        2. By giving an area a power cut (right click) so the robots can''t vote.
 
 
-        In
-        this modern age, elections happen every 10 seconds.'
+        In this modern age, elections happen every 10 seconds.'
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 457
+      value: 453
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -334,7 +329,57 @@ PrefabInstance:
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_fontSizeMax
-      value: 122
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_overflowMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -60.45083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -105.06329
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -106.31508
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -7.755606
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_lineSpacingMax
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939518, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -576,9 +621,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688769691}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 9
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
