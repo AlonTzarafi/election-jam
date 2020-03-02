@@ -55,6 +55,7 @@ MonoBehaviour:
     type: 3}
   others: 0
   population: 0
+  powerout: 0
 --- !u!1 &5715965993713163461
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: -1
-  m_Mesh: {fileID: 4711208715938537054, guid: 4bbe523b9bcda28678c89c93a3ea58a7, type: 3}
+  m_Mesh: {fileID: 4711208715938537054, guid: 6e2c2d5a19e44a2878722409dadf36de, type: 3}
 --- !u!114 &5441788399931897378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,17 +605,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6e2c2d5a19e44a2878722409dadf36de,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6e2c2d5a19e44a2878722409dadf36de,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6e2c2d5a19e44a2878722409dadf36de,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.6
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 6e2c2d5a19e44a2878722409dadf36de,
         type: 3}
