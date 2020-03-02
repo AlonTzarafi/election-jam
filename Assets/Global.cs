@@ -8,3 +8,6 @@ public class Global : MonoBehaviour
     static public bool others = false;
     static public string tool = "SMS";
 }
+
+// SMS
+// Powerout

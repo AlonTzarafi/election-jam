@@ -8,9 +8,16 @@ public class Area : MonoBehaviour
     private Canvas canvas;
     private Image factionIcon;
 
-    private int population;
-    private float others;
+    public float others;
+
+    // Always affects
     private float trend;
+
+    // Maybe for later
+    public int population;
+
+    // poweroutpoweroutpoweroutpowerout
+    private float powerout;
 
     private float smsFatigue = 0f;
 
@@ -24,16 +31,26 @@ public class Area : MonoBehaviour
         // canvas.transform.SetParent(null);
 
         others = UnityEngine.Random.Range(0f, 1f);
-        trend = UnityEngine.Random.Range(-0.04, +0.04);
+        var trendMax = 0.004f;
+        trend = UnityEngine.Random.Range(-trendMax, +trendMax);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        others = Mathf.Clamp(others, 0, 1);
-        factionIcon.color = new Color(others, 0, 1 - others, 1);
 
         others += trend;
+
+        powerout -= Time.fixedDeltaTime;
+        
+        //clean numbers
+        others = Mathf.Clamp(others, 0, 1);
+        // show support
+        factionIcon.color = new Color(0, 1 - others, others, 1);
+        //show blackout
+        if (powerout >= 0) {
+            factionIcon.color = new Color(0, 0, 0, 1);
+        }
     }
 
     public void Clicked()
@@ -44,9 +61,13 @@ public class Area : MonoBehaviour
             } else {
                 others -= 0.02f;
             }
+        } else if (Global.tool == "Powerout") {
+            powerout = 10f;
+        } else if (Global.tool == "???????????????????????") {
         }
         
-        smsFatigue = Math.Max(0f, smsFatigue - 0.1f);
+        smsFatigue = Mathf.Max(0f, smsFatigue - 0.1f);
+        smsFatigue = Mathf.Max(0f, smsFatigue - 0.1f);
     }
 
 }
