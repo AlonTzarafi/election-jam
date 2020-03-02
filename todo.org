@@ -1,0 +1,10 @@
+* TODO Make Robots
+* TODO Make party symbols
+* TODO Affect the outcome
+** TODO Ideas:
+*** TODO Propaganda
+*** TODO Explosions
+* TODO Make UI
+** TODO Show slider for support between the 2 parties
+** TODO Show timer until next election
+** TODO Show possible actions to perform (???)
