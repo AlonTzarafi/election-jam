@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -190,37 +191,37 @@ PrefabInstance:
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 162
+      value: -80.5
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 555
+      value: -429
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -232,10 +233,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939515, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3768
+      objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_fontSize
-      value: 25.21
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -245,12 +261,12 @@ PrefabInstance:
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 45
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -275,27 +291,50 @@ PrefabInstance:
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_text
-      value: "Welcome to 30000. The world now is populated by robots. Your mission
-        is to drag the elections as much as possible by keeping the balance equal.\r\nIf
-        one side has more than 60 votes, they win the election!\r\nHow do you influence
-        an area?\r\n1. By sending SMSs (left click), but be careful, if you send too
-        many you'll get blocked.\r\n2. By giving an area a power cut (right click)
-        so the robots can't vote.\nVotes happen every 10 seconds."
+      value: 'Welcome to 30000. The world now is populated by robots. Your mission
+        is to drag the elections as much as possible by keeping the balance equal.
+
+        If
+        one side has more than 60% votes, they win the election!
+
+
+        How do
+        you influence an area?
+
+        1. By sending SMSs (left click), but be
+        careful, if you send too many you''ll get blocked.
+
+        2. By giving
+        an area a power cut (right click) so the robots can''t vote.
+
+
+        In
+        this modern age, elections happen every 10 seconds.'
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 430
+      value: 457
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 80
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 81
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266836508028939517, guid: 101d0e53a02025442b498a1f42debd99,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 5266836508028939518, guid: 101d0e53a02025442b498a1f42debd99,
         type: 3}
@@ -332,16 +371,16 @@ RectTransform:
   m_GameObject: {fileID: 525042419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3768, y: 1.3768, z: 1.3768}
   m_Children:
   - {fileID: 649336734}
   m_Father: {fileID: 983340586}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -177}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 52.5}
+  m_SizeDelta: {x: 188, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525042421
 MonoBehaviour:
@@ -465,10 +504,10 @@ RectTransform:
   m_Father: {fileID: 525042420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -15.5}
+  m_SizeDelta: {x: 0, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649336735
 MonoBehaviour:
@@ -537,8 +576,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688769691}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10

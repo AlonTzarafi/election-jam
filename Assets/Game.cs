@@ -47,7 +47,7 @@ public class Game : MonoBehaviour
         }
 
         timeUntilElections -= Time.deltaTime;
-        var secondsToElectionString = "" + Mathf.Floor(timeUntilElections);
+        var secondsToElectionString = "" + Mathf.Ceil(timeUntilElections);
 
         // elections
         if (timeUntilElections < 0) {
@@ -55,6 +55,7 @@ public class Game : MonoBehaviour
             if (result < 0.4f || result > 0.6f) {
                 // Game over
                 Debug.Log("You lose!");
+                Application.LoadLevel("GameOver");
             }
         }
 
