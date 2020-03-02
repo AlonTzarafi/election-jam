@@ -42,17 +42,17 @@ public class Area : MonoBehaviour
 
     public void ResetTrend()
     {
-        // var trendMax = 0.003f;
-        // var a = -trendMax;
-        // var b = trendMax;
-        // if (UnityEngine.Random.Range(0, 3) == 0) {
-        //     a = 0;
-        //     b = trendMax * 2;
-        // } else if (UnityEngine.Random.Range(0, 4) == 0) {
-        //     a = -trendMax * 3;
-        //     b = 0;
-        // }
-        // trend = UnityEngine.Random.Range(a, b);
+        var trendMax = 0.003f;
+        var a = -trendMax;
+        var b = trendMax;
+        if (UnityEngine.Random.Range(0, 3) == 0) {
+            a = 0;
+            b = trendMax * 2;
+        } else if (UnityEngine.Random.Range(0, 4) == 0) {
+            a = -trendMax * 3;
+            b = 0;
+        }
+        trend = UnityEngine.Random.Range(a, b);
     }
 
     // Update is called once per frame
