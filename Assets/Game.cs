@@ -15,6 +15,8 @@ public class Game : MonoBehaviour
     private float timeUntilElections = 10f;
     private float timeUntilNextTrend = 0;
 
+    private int score = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +58,14 @@ public class Game : MonoBehaviour
                 // Game over
                 Debug.Log("You lose!");
                 Application.LoadLevel("GameOver");
+            } else {
+                score++;
             }
         }
+        
+        var electionNumber = GameObject.Find("ElectionNumber").GetComponent<Text>();
+        electionNumber.text = "Election #" + (score+1);
+        
 
         //update text
         var timeToElections = GameObject.Find("timeToElections").GetComponent<Text>();
