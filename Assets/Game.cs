@@ -71,7 +71,6 @@ public class Game : MonoBehaviour
         var timeToElections = GameObject.Find("timeToElections").GetComponent<Text>();
         timeToElections.text = "Time to elections: " + secondsToElectionString;
 
-
     }
 
     public void ChangeFaction(bool others)
