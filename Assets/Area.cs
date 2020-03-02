@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Area : MonoBehaviour
 {
+    GameObject smsPrefab1;
+    GameObject smsPrefab2;
+
     private Canvas canvas;
     private Image factionIcon;
 
@@ -31,8 +34,22 @@ public class Area : MonoBehaviour
         // canvas.transform.SetParent(null);
 
         others = UnityEngine.Random.Range(0f, 1f);
-        var trendMax = 0.004f;
-        trend = UnityEngine.Random.Range(-trendMax, +trendMax);
+        ResetTrend();
+    }
+
+    public void ResetTrend()
+    {
+        var trendMax = 0.003f;
+        var a = -trendMax;
+        var b = trendMax;
+        if (UnityEngine.Random.Range(0, 3) == 0) {
+            a *= 0;
+            b *= 2;
+        } else if (UnityEngine.Random.Range(0, 3) == 0) {
+            a *= 2;
+            b *= 0;
+        }
+        trend = UnityEngine.Random.Range(a, b);
     }
 
     // Update is called once per frame
@@ -56,10 +73,28 @@ public class Area : MonoBehaviour
     public void Clicked()
     {
         if (Global.tool == "SMS") {
+            Debug.Log("Activating SMS on ", this);
+            var thePrefab = smsPrefab1;
             if (Global.others) {
-                others += 0.02f;
+                others += SMSPower();
+                thePrefab = smsPrefab2;
             } else {
-                others -= 0.02f;
+                others -= SMSPower();
+            }
+            //effect
+            Vector3 mousePos=new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
+            
+            if(Input.GetMouseButtonDown(0)) {
+                Vector3 wordPos;
+                Ray ray=Camera.main.ScreenPointToRay(mousePos);
+                RaycastHit hit;
+                if(Physics.Raycast(ray,out hit,1000f)) {
+                    wordPos=hit.point;
+                } else {
+                    wordPos=Camera.main.ScreenToWorldPoint(mousePos);
+                }
+                Instantiate(thePrefab,wordPos,Quaternion.identity); 
+                //or for tandom rotarion use Quaternion.LookRotation(Random.insideUnitSphere)
             }
         } else if (Global.tool == "Powerout") {
             powerout = 10f;
@@ -67,7 +102,11 @@ public class Area : MonoBehaviour
         }
         
         smsFatigue = Mathf.Max(0f, smsFatigue - 0.1f);
-        smsFatigue = Mathf.Max(0f, smsFatigue - 0.1f);
+    }
+
+    private float SMSPower()
+    {
+        return 0.08f;
     }
 
 }
